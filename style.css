@@ -27,15 +27,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 4, 1fr;
+    grid-template-columns: 6 auto auto 300px auto 150px auto;
+    gap: 15px; 
+    grid-template-areas: row 1 "header header header header"
+    row 2 "navbar navbar navbar navbr"
+    row 3 "side main main main"
+    row 4 "side bar articale1 articale2 articale3"
+    row 5 "ad ad ad ad"
+    row 6 "footer footer footer footer";
+    padding: 20px;
 }
 
-/* DIRECTION 2: Add grid-template-columns with 4 equal columns using repeat(4, 1fr) */
+/*~; DIRECTION 2: Add grid-template-columns with 4 equal columns using repeat(4, 1fr) */
 
 
-/* DIRECTION 3: Add grid-template-rows with 6 rows: auto auto 300px auto 150px auto */
+/*`; DIRECTION 3: Add grid-template-rows with 6 rows: auto auto 300px auto 150px auto */
 
 
-/* DIRECTION 4: Add a gap of 15px between all grid items */
+/*`; DIRECTION 4: Add a gap of 15px between all grid items */
 
 
 /* DIRECTION 5: Define grid-template-areas with the layout below:
@@ -66,12 +77,13 @@ body {
 
 /* DIRECTION 8: Make the h1 font-size 2.5em */
 .header h1 {
+    font-size: 2.5em;
 
 }
 
 /* DIRECTION 9: Set the header paragraph margin-top to 10px */
 .header p {
-
+margin-top: 10px;
 }
 
 /* ========================================
@@ -83,6 +95,7 @@ body {
     background-color: #333;
     padding: 15px;
     border-radius: 8px;
+    grid-area: ;
 }
 
 /* DIRECTION 11: Set .navbar display to flex */
