@@ -27,15 +27,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 4, 1fr;
+    grid-template-rows:auto auto 300px auto 150px auto;
+    gap: 15px; 
+    grid-template-areas: row 1 "header header header header"
+    row 2 "navbar navbar navbar navbar"
+    row 3 "side main main main"
+    row 4 "side bar articale1 articale2 articale3"
+    row 5 "ad ad ad ad"
+    row 6 "footer footer footer footer";
+    padding: 20px;
 }
 
-/* DIRECTION 2: Add grid-template-columns with 4 equal columns using repeat(4, 1fr) */
+/*~; DIRECTION 2: Add grid-template-columns with 4 equal columns using repeat(4, 1fr) */
 
 
-/* DIRECTION 3: Add grid-template-rows with 6 rows: auto auto 300px auto 150px auto */
+/*`; DIRECTION 3: Add grid-template-rows with 6 rows: auto auto 300px auto 150px auto */
 
 
-/* DIRECTION 4: Add a gap of 15px between all grid items */
+/*`; DIRECTION 4: Add a gap of 15px between all grid items */
 
 
 /* DIRECTION 5: Define grid-template-areas with the layout below:
@@ -44,7 +55,7 @@ body {
    Row 3: "sidebar main main main"
    Row 4: "sidebar article1 article2 article3"
    Row 5: "ad ad ad ad"
-   Row 6: "footer footer footer footer"
+   Row 6: "footer footer footer footer" 
 */
 
 
@@ -62,16 +73,18 @@ body {
     padding: 30px;
     text-align: center;
     border-radius: 10px;
+    grid-area: "header";
 }
 
 /* DIRECTION 8: Make the h1 font-size 2.5em */
 .header h1 {
+    font-size: 2.5em;
 
 }
 
 /* DIRECTION 9: Set the header paragraph margin-top to 10px */
 .header p {
-
+margin-top: 10px;
 }
 
 /* ========================================
@@ -83,6 +96,8 @@ body {
     background-color: #333;
     padding: 15px;
     border-radius: 8px;
+    grid-area: "navbar";
+    justify-content:space-around;
 }
 
 /* DIRECTION 11: Set .navbar display to flex */
@@ -96,7 +111,7 @@ body {
 
     padding: 10px 20px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition:white 
 }
 
 /* Hover effect - Already done for you! */
@@ -118,11 +133,12 @@ body {
 
 /* DIRECTION 15: Set .sidebar h2 color to #667eea */
 .sidebar h2 {
-
+color: #667eea;
 }
 
 /* DIRECTION 16: Remove list-style from .sidebar ul and set margin-top to 15px */
 .sidebar ul {
+    margin-top: 15px;
 
 
 }
@@ -154,12 +170,15 @@ body {
 
 /* DIRECTION 18: Set .main-content h2 color to #333 and margin-bottom to 15px */
 .main-content h2 {
-
+color: #333;
+margin-bottom: 15px;
 
 }
 
 /* DIRECTION 19: Set .main-content p line-height to 1.6 and margin-bottom to 10px */
 .main-content p {
+    line-height: 1.6;
+    margin-bottom: 10px;
 
 
 }
@@ -171,10 +190,11 @@ body {
 /* DIRECTION 20: Assign grid-area: article1 to .article1 class */
 .article1 {
     background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: white;
+    color: rgb(255, 0, 0);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    grid-area: "article"
 }
 
 /* DIRECTION 21: Assign grid-area: article2 to .article2 class */
@@ -184,6 +204,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    grid-area:"article2";
 }
 
 /* DIRECTION 22: Assign grid-area: article3 to .article3 class */
@@ -193,6 +214,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    grid-area: "article3"
 }
 
 /* ========================================
@@ -210,7 +232,7 @@ body {
 
 /* DIRECTION 24: Set .advertisement h3 font-size to 1.8em */
 .advertisement h3 {
-
+font: size 1.8em;
 }
 
 /* ========================================
