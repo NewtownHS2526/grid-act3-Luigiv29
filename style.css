@@ -27,17 +27,18 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    display: grid;
-    grid-template-columns: 4, 1fr;
+    grid-template-columns:4 1fr;
     grid-template-rows:auto auto 300px auto 150px auto;
-    gap: 15px; 
-    grid-template-areas: row 1 "header header header header"
-    row 2 "navbar navbar navbar navbar"
-    row 3 "side main main main"
-    row 4 "side bar articale1 articale2 articale3"
-    row 5 "ad ad ad ad"
-    row 6 "footer footer footer footer";
-    padding: 20px;
+    gap: 15px  ;
+    grid-template-areas: 
+    "header header header header"
+    "navbar navbar navbar navbar"
+    "sidebar main main main"
+    "sidebar article1 article2 article3"
+    "ad ad ad ad"
+    "footer footer footer footer" 
+  ;
+    padding:20px;
 }
 
 /*~; DIRECTION 2: Add grid-template-columns with 4 equal columns using repeat(4, 1fr) */
@@ -96,8 +97,9 @@ margin-top: 10px;
     background-color: #333;
     padding: 15px;
     border-radius: 8px;
-    grid-area: "navbar";
-    justify-content:space-around;
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* DIRECTION 11: Set .navbar display to flex */
@@ -129,6 +131,7 @@ margin-top: 10px;
     padding: 20px;
     border-radius: 8px;
     border-left: 4px solid #667eea;
+    grid-area: sidebar;
 }
 
 /* DIRECTION 15: Set .sidebar h2 color to #667eea */
@@ -194,7 +197,7 @@ margin-bottom: 15px;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    grid-area: "article"
+    grid-area: article1;
 }
 
 /* DIRECTION 21: Assign grid-area: article2 to .article2 class */
@@ -204,7 +207,7 @@ margin-bottom: 15px;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    grid-area:"article2";
+    grid-area:article2;
 }
 
 /* DIRECTION 22: Assign grid-area: article3 to .article3 class */
@@ -214,7 +217,7 @@ margin-bottom: 15px;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    grid-area: "article3"
+    grid-area: "article3";
 }
 
 /* ========================================
@@ -228,7 +231,9 @@ margin-bottom: 15px;
     border-radius: 8px;
     text-align: center;
     color: white;
+    grid-area:ad;
 }
+
 
 /* DIRECTION 24: Set .advertisement h3 font-size to 1.8em */
 .advertisement h3 {
@@ -246,6 +251,7 @@ font: size 1.8em;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
+    grid-area: footer;
 }
 
 /* ========================================
